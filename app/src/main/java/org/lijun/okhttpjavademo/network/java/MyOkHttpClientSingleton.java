@@ -4,6 +4,12 @@ import okhttp3.OkHttpClient;
 
 public class MyOkHttpClientSingleton {
     OkHttpClient okHttpClient = new OkHttpClient();
+
+
+    public OkHttpClient getOkHttpClient() {
+        return okHttpClient;
+    }
+
     private static class MyOkHttpClientSingletonHolder{
         private static MyOkHttpClientSingleton instance = new MyOkHttpClientSingleton();
     }
